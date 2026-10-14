@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/icon.png" width="96" alt="no-dept 로고">
+<img src="profile/assets/icon.png" width="96" alt="no-dept 로고">
 
 # no-dept
 
@@ -18,7 +18,7 @@ no-dept는 Pull Request마다 **내 코드에 대한 퀴즈**를 내고, 이해�
 
 <br>
 
-<img src="assets/repo-dashboard.png" width="760" alt="레포지토리 대시보드 화면">
+<img src="profile/assets/repo-dashboard.png" width="760" alt="레포지토리 대시보드 화면">
 
 <sub>2026 컴퓨터과학종합설계 · 3조 <b>아자스</b></sub>
 
@@ -103,8 +103,8 @@ GitHub 계정으로 원클릭 로그인하고, 봇이 설치된 리포지토리�
 
 <table>
 <tr>
-<td width="50%"><img src="assets/login.png" alt="로그인 화면"></td>
-<td width="50%"><img src="assets/repo-list.png" alt="리포지토리 선택 화면"></td>
+<td width="50%"><img src="profile/assets/login.png" alt="로그인 화면"></td>
+<td width="50%"><img src="profile/assets/repo-list.png" alt="리포지토리 선택 화면"></td>
 </tr>
 </table>
 
@@ -113,22 +113,22 @@ PR별로 자동 생성된 퀴즈 목록에서 원하는 문제를 골라 풉니�
 
 <table>
 <tr>
-<td width="50%"><img src="assets/quiz-list.png" alt="PR별 퀴즈 목록"></td>
-<td width="50%"><img src="assets/quiz-solving.png" alt="퀴즈 풀이 화면"></td>
+<td width="50%"><img src="profile/assets/quiz-list.png" alt="PR별 퀴즈 목록"></td>
+<td width="50%"><img src="profile/assets/quiz-solving.png" alt="퀴즈 풀이 화면"></td>
 </tr>
 </table>
 
 ### ③ 나의 지식 부채 대시보드
 내 부채 점수, 연속 기록, **첫 시도 정답률 / 최종 정답률**, 주간 추이와 약점 개념을 한 화면에서 확인합니다.
 
-<p align="center"><img src="assets/personal-dashboard.png" width="560" alt="개인 대시보드"></p>
+<p align="center"><img src="profile/assets/personal-dashboard.png" width="560" alt="개인 대시보드"></p>
 
 ### ④ 팀 현황 · 랭킹 · 이력
 팀 전체의 개념 히트맵(맨 위 화면)과 팀원별 지식 부채 순위를 한눈에 보고, 나와 팀원이 어떤 문제를 풀었는지 이력을 확인할 수 있습니다.
 
 <table>
-<tr><td><img src="assets/team-ranking.png" alt="팀 랭킹"></td></tr>
-<tr><td><img src="assets/history.png" alt="팀원 풀이 이력"></td></tr>
+<tr><td><img src="profile/assets/team-ranking.png" alt="팀 랭킹"></td></tr>
+<tr><td><img src="profile/assets/history.png" alt="팀원 풀이 이력"></td></tr>
 </table>
 
 <br>
@@ -279,7 +279,7 @@ flowchart TB
 
 Worker가 OpenAI Rate Limit 등으로 **5회 연속 실패**하면 메시지를 버리지 않고 **DLQ로 옮겨 14일간 보관**합니다. DLQ에 메시지가 1개라도 쌓이면 CloudWatch 알람 → SNS → 팀 이메일로 즉시 알림이 갑니다.
 
-<p align="center"><img src="assets/dlq-flow.png" width="680" alt="DLQ 장애 격리 및 알림 흐름"></p>
+<p align="center"><img src="profile/assets/dlq-flow.png" width="680" alt="DLQ 장애 격리 및 알림 흐름"></p>
 
 <details>
 <summary><b>🐛 로그 분석으로 잡은 3대 버그</b></summary>
