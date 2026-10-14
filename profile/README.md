@@ -20,7 +20,7 @@ no-dept는 Pull Request마다 **내 코드에 대한 퀴즈**를 내고, 이해�
 
 <img src="assets/repo-dashboard.png" width="760" alt="레포지토리 대시보드 화면">
 
-<sub>2026 컴퓨터과학종합설계 · 3조 <b>아자스</b> · 지도교수 이동희 교수님</sub>
+<sub>2026 컴퓨터과학종합설계 · 3조 <b>아자스</b></sub>
 
 </div>
 
@@ -32,7 +32,7 @@ no-dept는 Pull Request마다 **내 코드에 대한 퀴즈**를 내고, 이해�
 >
 > 🧩 **해결** — 개발자가 코드를 올리면(PR), 봇이 바뀐 부분을 읽고 AI로 **맞춤형 퀴즈**를 만듭니다.
 >
-> 🚦 **결과** — 퀴즈를 풀어 이해했음을 증명하면 🟢 초록불, 아니면 🔴 빨간불이 켜지고 **코드 합치기(Merge)가 막힙니다.**
+> 🚦 **결과** — 퀴즈를 풀어 이해했음을 증명하면 🟢 초록불, 아니면 🔴 빨간불이 켜지고 **Merge가 막힙니다.**
 
 <br>
 
@@ -56,7 +56,7 @@ no-dept는 Pull Request마다 **내 코드에 대한 퀴즈**를 내고, 이해�
 
 - **PR이 Merge됐다고 이해가 끝난 걸까요?** 아니요. 텍스트 리뷰만으로는 변경의 맥락과 의도가 팀에 온전히 전달되지 않습니다.
 - **코드 리뷰가 끝나면 지식은 사라집니다.** 특히 새로 합류한 팀원은 바뀐 로직을 따라잡기 어렵습니다.
-- 이해 없는 병합 → 기술 부채 누적 → **장기 유지보수 비용 폭발**
+- 이해 없는 병합 → 기술 부채 누적 → **장기 유지보수 비용**
 
 **no-dept**는 이 빚이 쌓이기 전에, 코드를 올리는 바로 그 순간에 **작은 퀴즈로 이해도를 확인**합니다.
 
@@ -141,7 +141,7 @@ PR별로 자동 생성된 퀴즈 목록에서 원하는 문제를 골라 풉니�
 |:--|:--:|:--|
 | ✅ 첫 시도에 정답 | **0.0** | 완전히 이해함 — 빚 없음 |
 | 🔁 틀렸지만 결국 정답 | **0.3** | 이해는 했지만 조금 헷갈림 |
-| ❌ 아직 안 풀었음 | **1.0** | 이해를 확인하지 못함 — 빚 그대로 |
+| ❌ 아직 안 풀었음 | **1.0** | 이해를 확인하지 못함 — 빚 유지 |
 
 점수는 볼 때마다 최신 상태로 계산되며, 지난 주의 기록은 그때 값 그대로 고정되어 **주간 추이 그래프**로 보여집니다.
 
@@ -304,7 +304,6 @@ Worker가 OpenAI Rate Limit 등으로 **5회 연속 실패**하면 메시지를 
 | 📡 [**event-pipeline**](https://github.com/no-dept/event-pipeline) | GitHub 이벤트를 받아 작업 큐로 전달 | AWS Lambda · SQS |
 | 📐 [**shared-schema**](https://github.com/no-dept/shared-schema) | 모든 레포가 공유하는 데이터 모델 | Python · Pydantic v2 |
 | ☁️ [**infra**](https://github.com/no-dept/infra) | AWS 인프라 코드 + 운영 문서 | Terraform · AWS |
-| 🌱 [**demo**](https://github.com/no-dept/demo) | 봇 시연용 예제 프로젝트 | Java 17 · Gradle |
 
 <details>
 <summary><b>🧠 backend</b> — 시스템의 두뇌</summary>
@@ -385,15 +384,6 @@ Terraform으로 AWS 자원을 코드로 관리합니다.
 
 </details>
 
-<details>
-<summary><b>🌱 demo</b> — 봇을 시연하는 무대</summary>
-<br>
-
-no-dept 봇을 설치해 실제 PR → 퀴즈 → Merge 흐름을 보여 주기 위한 예제 리포지토리입니다.<br>
-Spring Framework의 핵심 원리(IoC/DI 컨테이너, MVC, AOP)를 직접 구현해 본 Java 프로젝트 코드를 담고 있습니다.
-
-</details>
-
 <br>
 
 ## 🛠️ 기술 스택
@@ -454,7 +444,7 @@ Spring Framework의 핵심 원리(IoC/DI 컨테이너, MVC, AOP)를 직접 구�
 | 이름 | 역할 | 담당 |
 |:--:|:--|:--|
 | **이도권**<br><sub>[@dokwon33](https://github.com/dokwon33)</sub> | 👑 팀장 · FE 기획 | UI/UX 총괄 |
-| **이태권**<br><sub>[@jigun058](https://github.com/jigun058)</sub> | 🛠️ BE · FE 겸임 | 백엔드 API, 대시보드 구현, DB · 인프라 |
+| **이태권**<br><sub>[@jigun058](https://github.com/jigun058)</sub> | 🛠️ BE · FE 겸임 | UI 설계, 대시보드 구현, 백엔드 API, DB · 인프라 |
 | **유영호**<br><sub>[@younghoyk](https://github.com/younghoyk)</sub> | 🧠 LLM 엔진 | 퀴즈 생성 엔진, 지식 부채 알고리즘 설계 |
 | **조우형**<br><sub>[@woo0109](https://github.com/woo0109)</sub> | 📡 파이프라인 | GitHub App, Webhook & 이벤트 처리 |
 
